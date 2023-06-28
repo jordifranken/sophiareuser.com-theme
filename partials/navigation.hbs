@@ -2,7 +2,7 @@
     <ul class="nav" role="menu">
         {{#foreach navigation}}
             <li class="nav-{{t slug}}" role="menuitem">
-                <a href="{{url}}">
+                <a href="{{t url}}">
                     <svg class="icon" role="img" aria-label="{{t slug}} icon">
                         <title>{{t slug}}</title>
                         <use xlink:href="#{{t slug}}"></use>
@@ -14,7 +14,7 @@
 {{else}}
     <ul class="nav">
         {{#foreach navigation}}
-        <li class="{{link_class for=(url) class=(concat "nav-" slug)}}"><a href="{{url absolute="true"}}">{{t label}}</a></li>
+        <li class="{{link_class for=(url) class=(concat "nav-" slug)}}"><a href="{{@site.url}}{{t url}}">{{t label}}</a></li>
         {{/foreach}}
     </ul>
 {{/if}}
