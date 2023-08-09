@@ -2,30 +2,36 @@
     "nl.< 1 min read": "< 1 min lezen",
     "nl.1 min read": "1 min lezen",
     "nl.% min read": "% min lezen",
+
+    "nl.Travel": "Reizen",
     "nl.About": "Over",
-    "nl.Home": "Thuis",
     "nl.Online Consult": "Online Consult",
     "nl./":"/nl/",
+    "nl./travel/":"/reizen/",
     "nl./about-sophia/":"/over-sophia/",
     "nl./online-consult/":"/consult-online/",
 
     "es.< 1 min read": "< 1 min de lectura",
     "es.1 min read": "1 min de lectura",
     "es.% min read": "% min de lectura",
+
+    "es.Travel": " ",
     "es.About": "Sobre",
-    "es.Home": "Casa",
     "es.Online Consult": "Consulto en Linea",
     "es./":"/es/",
+    "es./travel/":"/",
     "es./about-sophia/":"/sobre-sophia/",
     "es./online-consult/":"/consulto-en-linea/",
 
     "en.< 1 min read": "< 1 min read",
     "en.1 min read": "1 min read",
     "en.% min read": "% min read",
+
+    "en.Travel": "Travel",
     "en.About": "About",
-    "en.Home": "Home",
     "en.Online Consult": "Online Consult",
     "en./":"/",
+    "en./travel/":"/travel/",
     "en./about-sophia/":"/about-sophia/",
     "en./online-consult/":"/online-consult/"
 }
