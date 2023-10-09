@@ -4,10 +4,12 @@
     "nl.% min read": "% min lezen",
     "nl.Wisdom for Health & Travel": "Wijsheid voor het Leven & Reizen",
 
+    "nl.Health": "Gezondheid",
     "nl.Travel": "Reizen",
     "nl.About": "Over",
     "nl.Online Consult": "Online Consult",
     "nl./":"/nl/",
+    "nl./health/":"/gezondheid/",
     "nl./travel/":"/reizen/",
     "nl./about-sophia/":"/over-sophia/",
     "nl./online-consult/":"/consult-online/",
@@ -17,6 +19,7 @@
     "es.% min read": "% min de lectura",
     "es.Wisdom for Health & Travel": "La Sabiduría",
 
+    "es.Health": " ",
     "es.Travel": " ",
     "es.About": "Sobre",
     "es.Online Consult": "Consulto en Linea",
@@ -30,10 +33,12 @@
     "en.% min read": "% min read",
     "en.Wisdom for Health & Travel": "Wisdom for Health & Travel",
 
+    "en.Health": "Health",
     "en.Travel": "Travel",
     "en.About": "About",
     "en.Online Consult": "Online Consult",
     "en./":"/",
+    "en./health/":"/health/",
     "en./travel/":"/travel/",
     "en./about-sophia/":"/about-sophia/",
     "en./online-consult/":"/online-consult/"
