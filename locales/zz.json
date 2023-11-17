@@ -22,11 +22,11 @@
     "es.Health": " ",
     "es.Travel": " ",
     "es.About": "Sobre",
-    "es.Online Consult": "Consulto en Linea",
+    "es.Online Consult": " ",
     "es./":"/es/",
     "es./travel/":"/",
     "es./about-sophia/":"/sobre-sophia/",
-    "es./online-consult/":"/consulto-en-linea/",
+    "es./online-consult/":"/",
 
     "en.< 1 min read": "< 1 min read",
     "en.1 min read": "1 min read",
