@@ -1,0 +1,8 @@
+steps:
+- git checkout update
+- git merge main
+    - resolve conflicts: accept all main changes  
+- git fetch upstream
+- git merge vx.x.x
+    - resolve conflits
+- restart website
