@@ -89,13 +89,21 @@
         {{!-- The global footer at the very bottom of the screen --}}
         <footer class="site-footer outer">
             <div class="inner">
-                <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}
+                <section class="copyright">
+                    <a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}
+                    <p>Sophia Reuser</p>
+                    <p>Van Hardenbroeklaan 62</p>
+                    <p>3832 CZ Leusden</p>
+                    <p>Nederland/Netherlands</p>
                 </section>
                 <nav class="site-footer-nav">
                     {{navigation type="secondary"}}
                 </nav>
-                <div class="gh-powered-by"><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by
-                        Ghost</a></div>
+                <div class="business-info">
+                    <a href="/data-privacy/">Data &amp; Privacy</a>
+                    <p>KvK nr 64383393</p>
+                    <p>BTW nr NL001997060B51</p>
+                </div>
             </div>
         </footer>
 
