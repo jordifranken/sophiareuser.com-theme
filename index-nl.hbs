@@ -1,2 +1,10 @@
 {{!< index}}
 {{#contentFor "lang"}}nl{{/contentFor}}
+
+{{#contentFor "categories"}}
+    {{#get "posts" limit="all" include="tags" filter="tag:nl"}}
+        {{#foreach posts}}
+            <span class="category-item">{{tags}}</span>
+        {{/foreach}}
+    {{/get}}
+{{/contentFor}}
