@@ -1,12 +1,12 @@
 {{#if isSecondary}}
     <ul class="nav" role="menu">
         {{#foreach navigation}}
-            <li class="nav-{{t slug}}" role="menuitem">
-                <a href="{{t url}}">
-                    <svg class="icon" role="img" aria-label="{{t slug}} icon">
+            <li class="nav-{{slug}}" role="menuitem">
+                <a href="{{url}}">{{label}}
+                    {{!-- <svg class="icon" role="img" aria-label="{{t slug}} icon">
                         <title>{{t slug}}</title>
                         <use xlink:href="#{{t slug}}"></use>
-                    </svg>
+                    </svg> --}}
                 </a>
             </li>
         {{/foreach}}
@@ -18,4 +18,3 @@
         {{/foreach}}
     </ul>
 {{/if}}
-
