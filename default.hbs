@@ -19,6 +19,52 @@
     this will take care of caching and cache-busting automatically --}}
     <link rel="stylesheet" type="text/css" href="{{asset " built/screen.css"}}" />
 
+    {{!-- START: Header code injection --}}
+    <style>
+        .gh-head-inner,
+        .site-description {
+            color: #000000 !important;
+            /* or color: #14171a of you don't want to use your accent color with it*/
+            background: none;
+        }
+
+        /* Make all links in blog-content warm yellow */
+        .gh-content a {
+            color: #FFC61A;
+        }
+
+        /* Make site-logo (when in center) bigger */
+        .site-logo {
+            max-height: 280px;
+        }
+
+        .site-header-content {
+            padding-top: calc(16vmin + 22px);
+            padding-bottom: 16vmin;
+        }
+
+        /* Category navigation */
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+            list-style: none;
+            margin: 0;
+            padding-top: 40px;
+        }
+
+        .category-item {
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .business-info {
+            text-align: end;
+        }
+    </style>
+    {{!-- END: Header code injection --}}
+
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
     it should always be the last tag before the closing head tag --}}
     {{ghost_head}}
@@ -129,6 +175,40 @@
             $(".gh-content").fitVids();
         });
     </script>
+
+    {{!-- START: Footer code injection --}}
+    <script>
+        var categoriesDiv = document.querySelector('.categories');
+        var links = categoriesDiv.querySelectorAll('.category-item a');
+        var hrefs = {};
+
+        // oop through all <a> elements
+        links.forEach(function (link, index) {
+            var href = link.getAttribute('href');
+
+            // Check if href value already exists in the object
+            if (!hrefs[href]) {
+                // If it doesn't exist, add it to the object
+                hrefs[href] = true;
+            } else {
+                // If it does exist, remove the duplicate element from the DOM
+                link.parentNode.remove(); // Remove the <span> containing the duplicate <a>
+            }
+        });
+
+        // Remove all empty spans
+        var emptySpans = categoriesDiv.querySelectorAll('.category-item:not(:has(a))');
+        emptySpans.forEach(function (span) {
+            span.remove();
+        });
+
+        // Add class "category-item" to all spans (if not already added)
+        var spans = categoriesDiv.querySelectorAll('.category-item');
+        spans.forEach(function (span) {
+            span.classList.add('category-item');
+        });
+    </script>
+    {{!-- END: Footer code injection --}}
 
     {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the
     closing body tag --}}
