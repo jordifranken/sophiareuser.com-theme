@@ -23,26 +23,21 @@
     <style>
         .gh-head-inner,
         .site-description {
-            color: #000000 !important;
-            /* or color: #14171a of you don't want to use your accent color with it*/
-            background: none;
+        color: #000000 !important; /* or color: #14171a of you don't want to use your accent color with it*/
+        background: none;
         }
-
         /* Make all links in blog-content warm yellow */
         .gh-content a {
-            color: #FFC61A;
+        color: #FFC61A;
         }
-
         /* Make site-logo (when in center) bigger */
         .site-logo {
-            max-height: 280px;
+        max-height: 280px;
         }
-
         .site-header-content {
             padding-top: calc(16vmin + 22px);
             padding-bottom: 16vmin;
         }
-
         /* Category navigation */
         .categories {
             display: flex;
@@ -53,11 +48,10 @@
             margin: 0;
             padding-top: 40px;
         }
-
+        
         .category-item {
             font-weight: bold;
         }
-
         /* Footer */
         .business-info {
             text-align: end;
@@ -105,7 +99,7 @@
                 <div class="gh-head-actions">
                     {{#unless @site.members_enabled}}
                     {{^match @custom.navigation_layout "Stacked"}}
-                    <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                    {{!-- <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button> --}}
                     {{/match}}
                     {{else}}
                     <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{>
@@ -178,15 +172,20 @@
 
     {{!-- START: Footer code injection --}}
     <script>
+        // Step 1: Select the .categories div
         var categoriesDiv = document.querySelector('.categories');
+
+        // Step 3: Select all <a> elements within the .categories div
         var links = categoriesDiv.querySelectorAll('.category-item a');
+
+        // Step 4: Create an empty object to store unique href values
         var hrefs = {};
 
-        // oop through all <a> elements
+        // Step 5: Loop through all <a> elements
         links.forEach(function (link, index) {
             var href = link.getAttribute('href');
 
-            // Check if href value already exists in the object
+            // Step 6: Check if href value already exists in the object
             if (!hrefs[href]) {
                 // If it doesn't exist, add it to the object
                 hrefs[href] = true;
@@ -196,13 +195,14 @@
             }
         });
 
-        // Remove all empty spans
+        // Step 2: Remove all empty spans
         var emptySpans = categoriesDiv.querySelectorAll('.category-item:not(:has(a))');
         emptySpans.forEach(function (span) {
             span.remove();
         });
 
-        // Add class "category-item" to all spans (if not already added)
+
+        // Step 7: Add class "category-item" to all spans (if not already added)
         var spans = categoriesDiv.querySelectorAll('.category-item');
         spans.forEach(function (span) {
             span.classList.add('category-item');
